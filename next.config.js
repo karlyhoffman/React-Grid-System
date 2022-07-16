@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const path = require('path');
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -9,7 +11,10 @@ const nextConfig = {
       use: {
         loader: 'sass-resources-loader',
         options: {
-          resources: [path.join(__dirname, 'styles/variables/breakpoints.scss')],
+          resources: [
+            path.join(__dirname, 'styles/variables/breakpoints.scss'),
+            path.join(__dirname, 'styles/variables/layout.scss'),
+          ],
         },
       },
     });
