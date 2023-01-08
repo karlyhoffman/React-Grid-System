@@ -1,3 +1,5 @@
+$num-of-columns: 12;
+
 .row {
   display: flex;
   flex-direction: row;
@@ -16,8 +18,6 @@
     padding: 0 $gutter;
 
     @mixin column-classes($size) {
-      $num-of-columns: 12;
-
       @for $i from 1 through $num-of-columns {
         &.col-#{$size}-#{$i} {
           width: calc((100% / #{$num-of-columns}) * #{$i});

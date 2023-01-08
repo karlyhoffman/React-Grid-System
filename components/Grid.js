@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import styles from "styles/components/grid.module.scss";
 
+const NUM_OF_COLUMNS = 12; // same as $num-of-columns in grid.module.scss
+
 const Row = ({
   id,
   children,
@@ -20,8 +22,6 @@ const Row = ({
     </div>
   );
 };
-
-const NUM_OF_COLUMNS = 12; // same as $num-of-columns in grid.module.scss
 
 const Column = ({
   children,
