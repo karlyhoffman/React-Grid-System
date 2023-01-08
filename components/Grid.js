@@ -1,11 +1,17 @@
-import classNames from 'classnames';
-import styles from 'styles/components/grid.module.scss';
+import classNames from "classnames";
+import styles from "styles/components/grid.module.scss";
 
-const Row = ({ id, children, noGutter = false, className, fullWidth = false }) => {
+const Row = ({
+  id,
+  children,
+  noGutter = false,
+  className,
+  fullWidth = false,
+}) => {
   return (
     <div
       id={id || null}
-      className={classNames(styles.row, className, 'container', {
+      className={classNames(styles.row, className, "container", {
         [styles.no_gutter]: noGutter,
         [styles.full]: fullWidth,
       })}
@@ -15,7 +21,7 @@ const Row = ({ id, children, noGutter = false, className, fullWidth = false }) =
   );
 };
 
-const NUM_OF_COLUMNS = 12; // same as $num-of-columns in columns.module.scss
+const NUM_OF_COLUMNS = 12; // same as $num-of-columns in grid.module.scss
 
 const Column = ({
   children,
